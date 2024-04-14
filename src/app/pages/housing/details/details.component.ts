@@ -14,23 +14,15 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './details.component.css'
 })
 export class DetailsComponent {
+
+  //inject form into the tmeplate
   applyForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
     email: new FormControl('')
   });
 
-
-
-
-
-
-
-
-
-
-
-
+  //capture the id in th url route and use that to find that particar resourde
   route: ActivatedRoute = inject(ActivatedRoute);
   housingService = inject(HousingService);
   housingLocation: HousingLocation | undefined;
@@ -39,7 +31,7 @@ export class DetailsComponent {
     this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
   }
 
-
+//function to recieve form parameters
   submitApplication() {
     this.housingService.submitApplication(
       this.applyForm.value.firstName ?? '',
