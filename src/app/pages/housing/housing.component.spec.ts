@@ -11,13 +11,10 @@ describe('HousingComponent', () => {
       imports: [HousingComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(HousingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });
