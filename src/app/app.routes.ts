@@ -1,8 +1,9 @@
 import { Routes } from '@angular/router';
 import { GalleryComponent } from './pages/gallery/gallery.component';
-import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MainLayoutComponent } from './shared/layout/main-layout/main-layout.component';
+import { AuthLayoutComponent } from './shared/layout/auth-layout/auth-layout.component';
+import { LoginComponent } from './pages/auth/login/login.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HousingComponent } from './pages/housing/housing.component';
@@ -21,5 +22,12 @@ export const routes: Routes = [
       { path: 'details/:id', component: DetailsComponent},
       // Other routes...
     ]
-  }
+  },
+  {
+    path: 'auth',
+      component: AuthLayoutComponent,
+      children: [
+        { path: '', component: LoginComponent },
+      ]
+    }
 ];
