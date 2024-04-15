@@ -15,7 +15,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class DetailsComponent {
 
-  //inject form into the template
+  //inject form into the template and bind form data
   applyForm = new FormGroup({
     firstName: new FormControl(''),
     lastName: new FormControl(''),
