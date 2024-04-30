@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "second-app-with-tailwindcss": {
+      "i18n": {
+        "sourceLocale":"en-US",
+        "locales": {
+          "es-PR": "src/locale/messages.en.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +19,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize":[
+              "es-PR"
+            ],
             "outputPath": "dist/second-app-with-tailwindcss",
             "index": "src/index.html",
             "browser": "src/main.ts",
